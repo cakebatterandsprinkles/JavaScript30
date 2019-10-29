@@ -1,0 +1,50 @@
+body {
+    padding:0;
+    margin:0;
+    background-color:black
+}
+.keys {
+    max-width:980px;
+    margin:auto;
+    margin-top:10vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 5fr 1fr;
+    grid-template-rows: 2fr 1fr 10fr;
+    height:80vh;
+    border: 4px solid black;
+}
+
+.key {
+    border: 4px solid black;
+    background-color:white;
+}
+
+.insidekey {
+    border-bottom: 8px solid black;
+}
+
+#key12 {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+#key14, #key15 {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+#key20, #key2 {
+    background-color: red;
+}
+
+#key5, #key4 {
+    background-color: blue;
+}
+
+#key16 {
+    background-color: black;
+}
+
+#key19, #key7 {
+    background-color: yellow;
+}
