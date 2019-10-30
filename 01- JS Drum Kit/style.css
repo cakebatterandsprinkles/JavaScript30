@@ -28,12 +28,28 @@ kbd {
     display:flex;
     flex-direction:column;
 }
-.header{
-    margin-top:5vh;
+.header {
+    margin-top:3vh;
     color: #f9f9f9;
     margin-left:auto;
     font-size: 1.25rem;
     font-weight:light;
+}
+
+.footer {
+    margin-top:1vh;
+    color: #f9f9f9;
+    display:flex;
+    justify-content: space-between;
+    padding:0 0.5rem;
+    font-size: 1rem;
+    font-weight:light;
+}
+
+.link{
+    color: #fff001;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .sound {
@@ -54,6 +70,13 @@ kbd {
     flex-direction:column;
     justify-content: center;
     align-items:center;
+    transition: all 0.07s;
+}
+
+.playing {
+    transform:scale(1.01);
+    border-color: #fff001;
+    box-shadow: 0 2px 10px #fff001;
 }
 
 .key {

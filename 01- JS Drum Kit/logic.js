@@ -8,10 +8,14 @@ window.addEventListener("keydown", handleKeydown);
 
 function handleKeydown(e) {
     let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    if (!audio) 
-        return;
+    let key = document.querySelector(`.rectangle[data-key="${e.keyCode}"]`);
+    if (!audio) return;
     audio.currentTime = 0; //rewind to the start
     audio.play();
+    key.classList.add("playing");
+    setTimeout(function(){
+        key.classList.remove("playing");
+    }, 300);
 }
 
 function handleClick(e) {
@@ -73,10 +77,13 @@ function handleClick(e) {
             keyCode = 84;
             break;
     }
-    console.log(keyCode);
     let audio = document.querySelector(`audio[data-key="${keyCode}"]`);
-    if (!audio) 
-        return;
+    let key = document.querySelector(`.rectangle[data-key="${keyCode}"]`);
+    if (!audio) return;
     audio.currentTime = 0; //rewind to the start
     audio.play();
+    key.classList.add("playing");
+    setTimeout(function(){
+        key.classList.remove("playing");
+    }, 300);
 }
