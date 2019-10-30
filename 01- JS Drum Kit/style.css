@@ -1,26 +1,68 @@
 body {
     padding:0;
     margin:0;
-    background-color:black
+    font-family:monospace;
+    background-color:#000002;
 }
-.keys {
+
+kbd {
+    font-weight:bold;
+    font-size:1.75rem;
+}
+
+#key0 kbd, #key1 kbd, #key2 kbd, #key3 kbd {
+    font-size:3rem;
+}
+
+#key11 kbd, #key17 kbd, #key18 kbd {
+    font-size:3.5rem;
+}
+
+#key13 kbd, #key16 kbd, #key19 kbd {
+    font-size:4rem;
+}
+
+.container {
     max-width:980px;
     margin:auto;
-    margin-top:10vh;
+    display:flex;
+    flex-direction:column;
+}
+.header{
+    margin-top:5vh;
+    color: #f9f9f9;
+    margin-left:auto;
+    font-size: 1.25rem;
+    font-weight:light;
+}
+
+.sound {
+    display: block;
+    font-size: 0.75rem;
+}
+
+.keys {
     display: grid;
     grid-template-columns: 2fr 3fr 3fr 5fr 1fr;
     grid-template-rows: 2fr 1fr 10fr;
     height:80vh;
-    border: 4px solid black;
+    border: 4px solid #000002;
+}
+
+.rectangle {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
 }
 
 .key {
-    border: 4px solid black;
-    background-color:white;
+    border: 4px solid #000002;
+    background-color:#f9f9f9;
 }
 
 .insidekey {
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid #000002;
 }
 
 #key12 {
@@ -33,18 +75,20 @@ body {
     grid-template-rows: 1fr 3fr;
 }
 
-#key20, #key2 {
-    background-color: red;
+#key20, #key2, #key17 {
+    background-color: #ff0101;
 }
 
 #key5, #key4 {
-    background-color: blue;
+    background-color: #0101fd;
+    color: #f9f9f9;
 }
 
-#key16 {
-    background-color: black;
+#key16, #key9 {
+    background-color: #000002;
+    color: #f9f9f9;
 }
 
 #key19, #key7 {
-    background-color: yellow;
+    background-color: #fff001;
 }

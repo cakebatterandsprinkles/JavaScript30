@@ -8,31 +8,130 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="keys">
-            <div data-key="65" class="key"></div>
-            <div class="key" id="key1"></div>
-            <div class="key" id="key2"></div>
-            <div class="key" id="key3"></div>
-            <div class="key" id="key4"></div>
-            <div class="key" id="key5"></div>
-            <div class="key" id="key6"></div>
-            <div class="key" id="key7"></div>
-            <div class="key" id="key8"></div>
-            <div class="key" id="key9"></div>
-            <div class="key" id="key11"></div>
-            <div class="key" id="key12">
-                <div class="insidekey" id="key16"></div>
-                <div id="key17"></div>
+        <div class="container">
+            <div class="header">
+                <p>Press A to start.</p>
             </div>
-            <div class="key" id="key13"></div>
-            <div class="key" id="key14">
-                <div class="insidekey" id="key18"></div>
-                <div id="key19"></div>
+            <div class="keys">
+                <div data-key="65" class="key rectangle" id="key0">
+                    <kbd>A</kbd>
+                    <span class="sound">Piet</span>
+                </div>
+                <div data-key="83" class="key rectangle" id="key1">
+                    <kbd>S</kbd>
+                    <span class="sound">Mondrian</span>
+                </div>
+                <div data-key="68" class="key rectangle" id="key2">
+                    <kbd>D</kbd>
+                    <span class="sound">20th century</span>
+                </div>
+                <div data-key="70" class="key rectangle" id="key3">
+                    <kbd>F</kbd>
+                    <span class="sound">Abstract Art</span>
+                </div>
+                <div data-key="71" class="key rectangle" id="key4">
+                    <kbd>G</kbd>
+                    <span class="sound">Colors</span>
+                </div>
+                <div data-key="72" class="key rectangle" id="key5">
+                    <kbd>H</kbd>
+                    <span class="sound">De Stijl</span>
+                </div>
+                <div data-key="74" class="key rectangle" id="key6">
+                    <kbd>J</kbd>
+                    <span class="sound">Color Field</span>
+                </div>
+                <div data-key="90" class="key rectangle" id="key7">
+                    <kbd>Z</kbd>
+                    <span class="sound">Minimalism</span>
+                </div>
+                <div data-key="88" class="key rectangle" id="key8">
+                    <kbd>X</kbd>
+                    <span class="sound">Modernism</span>
+                </div>
+                <div data-key="67" class="key rectangle" id="key9">
+                    <kbd>C</kbd>
+                    <span class="sound">Cubism</span>
+                </div>
+                <div data-key="86" class="key rectangle" id="key11">
+                    <kbd>V</kbd>
+                    <span class="sound">Design</span>
+                </div>
+                <div class="key" id="key12">
+                    <div data-key="66" class="insidekey rectangle" id="key16">
+                        <kbd>B</kbd>
+                        <span class="sound">Architecture</span>
+                    </div>
+                    <div data-key="78" class="rectangle" id="key17">
+                        <kbd>N</kbd>
+                        <span class="sound">Fashion</span>
+                    </div>
+                </div>
+                <div data-key="81" class="key rectangle" id="key13">
+                    <kbd>Q</kbd>
+                    <span class="sound">Post-impressionist</span>
+                </div>
+                <div class="key" id="key14">
+                    <div data-key="87" class="insidekey rectangle" id="key18">
+                        <kbd>W</kbd>
+                        <span class="sound">Spiritual</span>
+                    </div>
+                    <div data-key="69" class="rectangle" id="key19">
+                        <kbd>E</kbd>
+                        <span class="sound">Avant-garde</span>
+                    </div>
+                </div>
+                <div class="key" id="key15">
+                    <div data-key="82" class="insidekey rectangle" id="key20">
+                        <kbd>R</kbd>
+                        <span class="sound">Intuition</span>
+                    </div>
+                    <span data-key="84" class="rectangle" id="key21">
+                        <kbd>T</kbd>
+                        <span class="sound">Harmony</span>
+                    </div>
+                </div>
             </div>
-            <div class="key" id="key15">
-                <div class="insidekey" id="key20"></div>
-                <div id="key21"></div>
-            </div>
-            <script src="logic.js"></script>
-        </body>
-    </html>
+        </div>
+        <audio
+            data-key="65"
+            src="sounds/253212__poissonmort__toy-records-02-c-3-02.wav"></audio>
+        <audio
+            data-key="83"
+            src="sounds/253213__poissonmort__toy-records-04-d-3-01.wav"></audio>
+        <audio data-key="68" src="sounds/253225__poissonmort__toy-records-13-a3-02.wav"></audio>
+        <audio data-key="70" src="sounds/253226__poissonmort__toy-records-20-d4-02.wav"></audio>
+        <audio data-key="71" src="sounds/253233__poissonmort__toy-records-10-g3-01.wav"></audio>
+        <audio
+            data-key="72"
+            src="sounds/253234__poissonmort__toy-records-12-g-3-02.wav"></audio>
+        <audio
+            data-key="74"
+            src="sounds/253241__poissonmort__toy-records-21-d-4-04.wav"></audio>
+        <audio data-key="90" src="sounds/253244__poissonmort__toy-records-20-d4-01.wav"></audio>
+        <audio
+            data-key="88"
+            src="sounds/253246__poissonmort__toy-records-21-d-4-02.wav"></audio>
+        <audio data-key="67" src="sounds/253253__poissonmort__toy-records-07-f3-03.wav"></audio>
+        <audio data-key="86" src="sounds/253261__poissonmort__toy-records-22-e4-02.wav"></audio>
+        <audio
+            data-key="66"
+            src="sounds/253272__poissonmort__toy-records-15-a-3-02.wav"></audio>
+        <audio data-key="78" src="sounds/253275__poissonmort__toy-records-18-c4-01.wav"></audio>
+        <audio data-key="81" src="sounds/253276__poissonmort__toy-records-17-b3-03.wav"></audio>
+        <audio
+            data-key="87"
+            src="sounds/253212__poissonmort__toy-records-02-c-3-02.wav"></audio>
+        <audio
+            data-key="69"
+            src="sounds/253212__poissonmort__toy-records-02-c-3-02.wav"></audio>
+        <audio
+            data-key="82"
+            src="sounds/253212__poissonmort__toy-records-02-c-3-02.wav"></audio>
+        <audio
+            data-key="84"
+            src="sounds/253212__poissonmort__toy-records-02-c-3-02.wav"></audio>
+
+        <script src="logic.js"></script>
+    </body>
+</html>
