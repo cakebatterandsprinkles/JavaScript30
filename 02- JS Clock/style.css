@@ -20,16 +20,16 @@ body {
 .clock__classic {
   position: relative;
   border-radius: 50%;
-  border: 1rem solid rgba(32, 36, 70, 0.5);
+  border: 1rem solid rgba(240, 200, 22, 0.685);
   width: 20rem;
   height: 20rem;
   padding: 1.25rem;
   box-shadow:
-    0 0 0 4px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 3px rgba(32, 36, 70, 0.5),
-    inset 0 0 10px black,
-    0 0 10px rgba(0, 0, 0, 0.2);
+    0 0 0 4px rgba(226, 139, 40, 0.2),
+    inset 0 0 10px rgba(226, 139, 40, 0.2),
+    0 0 10px rgba(226, 139, 40, 0.2);
   margin: 1rem;
+  background: rgba(223, 215, 199, 0.685);
 }
 
 .clock__classic__face {
@@ -41,7 +41,7 @@ body {
 .hand {
   width: 50%;
   height: 0.5rem;
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(145, 209, 211);
   position: absolute;
   top: 50%;
   border-radius: 20px;
@@ -53,9 +53,29 @@ body {
 
 #hand__hour {
   width: 30%;
-  background-color: rgb(228, 38, 196);
+  background-color: rgb(255, 0, 230);
   position: absolute;
   top: 50%;
   left: 20%;
   transform: rotate(30deg);
+}
+
+#hand__minute {
+  width: 40%;
+  background-color: rgb(0, 140, 255);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: rotate(30deg);
+}
+
+.clock__middle {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  border-radius: 50%;
+  background: rgb(248, 141, 0);
+  z-index: 10
 }
