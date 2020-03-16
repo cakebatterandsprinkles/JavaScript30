@@ -7,24 +7,20 @@ const hoursDigital = document.querySelector('.digit__hour');
 const dateContainer = document.querySelector('.date');
 const weekdayContainer = document.querySelector('#weekday');
 
+const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const dayClasses = ['purple', 'blue', 'green', 'yellow', 'orange', 'pink', 'red'];
+
 function setTime() {
   const now = new Date();
 
   const seconds = now.getSeconds();
-  if (seconds < 10) {
-    secondsDigital.innerHTML = `<p>0${seconds}</p>`;
-  } else {
-    secondsDigital.innerHTML = `<p>${seconds}</p>`;
-  }
+  secondsDigital.innerHTML = `<p>${padNumber(seconds, 2)}</p>`;
+
   const secondDegrees = ((360 / 60) * seconds) + 90;
   secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 
   const minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutesDigital.innerHTML = `<p>0${minutes}:</p>`;
-  } else {
-    minutesDigital.innerHTML = `<p>${minutes}:</p>`;
-  }
+  minutesDigital.innerHTML = `<p>${padNumber(minutes, 2)}:</p>`;
 
   const minuteDegrees = ((360 / 60) * minutes) + 90;
   minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
@@ -36,46 +32,23 @@ function setTime() {
 }
 
 function setDate() {
-  let day;
   const today = new Date();
   const days = today.getUTCDate();
   const weekday = today.getUTCDay();
-  switch (weekday) {
-    case 1:
-      day = 'Monday';
-      weekdayContainer.className = 'purple';
-      break;
-    case 2:
-      day = 'Tuesday';
-      weekdayContainer.className = 'blue';
-      break;
-    case 3:
-      day = 'Wednesday';
-      weekdayContainer.className = 'green';
-      break;
-    case 4:
-      day = 'Thursday';
-      weekdayContainer.className = 'yellow';
-      break;
-    case 5:
-      day = 'Friday';
-      weekdayContainer.className = 'orange';
-      break;
-    case 6:
-      day = 'Saturday';
-      weekdayContainer.className = 'pink';
-      break;
-    case 7:
-      day = 'Sunday';
-      weekdayContainer.className = 'red';
-      break;
-  }
+
+  const day = dayNames[weekday - 1];
+  weekdayContainer.className = dayClasses[weekday - 1];
 
   const months = today.getUTCMonth() + 1;
   const years = today.getUTCFullYear();
-  dateContainer.innerHTML = `<p>${months} | ${days} | ${years}</p>`;
+  dateContainer.innerHTML = `<p>${padNumber(months, 2)} | ${days} | ${years}</p>`;
   weekdayContainer.innerHTML = `<p>${day}</p>`;
 }
+
+function padNumber(number, length) {
+  return ('' + number).padStart(length, '0');
+}
+
 setDate();
 setInterval(setTime, 1000);
 setInterval(setDate, 1000 * 60);
