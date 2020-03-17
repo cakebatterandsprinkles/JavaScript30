@@ -6,3 +6,6 @@ Toy piano sounds used in the JS Drum Kit app belongs to poissonmort from freesou
 You can reach the original files from https://freesound.org/people/poissonmort/
 
 Background image used in JS Clock was borrowed from unsplash and can be found here: https://unsplash.com/photos/FIKD9t5_5zQ
+
+Images used in the Update CSS Variables with JS were also taken from unsplash and can be found in the following links:
+https://unsplash.com/photos/layMbSJ3YOE

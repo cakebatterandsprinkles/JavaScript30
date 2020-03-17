@@ -1,0 +1,71 @@
+body,
+html {
+  margin: auto;
+  padding: auto
+}
+
+body {
+  height: 100vh;
+  background: rgb(46, 45, 49);
+  font-family: monospace;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 70vh;
+  width: auto;
+  border: 2rem solid black;
+  border-radius: 10px;
+}
+
+.input {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 60rem;
+}
+
+.filter__container {
+  z-index: 10;
+  height: 70vh;
+  width: 56.8rem;
+  position: absolute;
+  top: 21.5%;
+}
+
+.input__container {
+  margin-right: 2rem;
+  width: 25rem;
+  height: 10vh;
+  margin-bottom: 1rem;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.randombtn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 0.9rem;
+  width: 9rem;
+  display: inline-block;
+  margin: 0.1rem 0;
+}
+
+input {
+  display: inline-block;
+  margin: 0.2rem 0;
+  width: 12rem;
+}
