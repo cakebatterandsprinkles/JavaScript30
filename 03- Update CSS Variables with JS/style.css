@@ -1,3 +1,10 @@
+:root {
+  --base: rgb(147, 59, 206);
+  --spacing: 10px;
+  --blur: 5px;
+  --border: black;
+}
+
 body,
 html {
   margin: auto;
@@ -18,8 +25,11 @@ body {
 .image {
   height: 70vh;
   width: auto;
-  border: 2rem solid black;
+  border: 2rem solid var(--border);
   border-radius: 10px;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
 
 .input {
