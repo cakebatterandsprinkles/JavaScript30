@@ -21,3 +21,10 @@ https://unsplash.com/photos/ZANUsnn2IYw
 https://unsplash.com/photos/ATypuw_uqjw
 https://unsplash.com/photos/5dMzbtV6CLo
 https://unsplash.com/photos/x95-rxpCmkE
+
+Images used in Image Gallery with Flexbox can be found here:
+https://unsplash.com/photos/YV_gbygzlWk
+https://unsplash.com/photos/5P91SF0zNsI
+https://unsplash.com/photos/z8ct_Q3oCqM
+https://unsplash.com/photos/lpjb_UMOyx8
+https://unsplash.com/photos/S2uQdHTXbbc
