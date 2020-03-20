@@ -11,9 +11,13 @@ function updateUserInterface(arr, input) {
     const highlightStateInput = item.state.toLowerCase().replace(input, `<span class="hl">${input}</span>`);
     return `<li> 
       <span class="name">${highlightCityInput}, ${highlightStateInput}</span>
-      <span class="population">${item.population}</span>
+      <span class="population">${numberWithCommas(item.population)}</span>
     </li>`
   }).join('');
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 function handleUserInputChange() {
