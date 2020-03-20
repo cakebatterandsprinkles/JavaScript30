@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   background: #ffc600;
-  font-family: 'monospace';
+  font-family: monospace;
   font-size: 20px;
   font-weight: 200;
 }
@@ -10,6 +10,12 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.header {
+  color: rgba(0, 0, 0, 0.842);
+  text-align: center;
+  margin-top: 2rem;
 }
 
 input {

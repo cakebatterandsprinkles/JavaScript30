@@ -1,14 +1,24 @@
 const endpoint =
   'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
-
+const userInput = document.querySelector('.search');
 const cities = [];
 let input;
-const userInput = document.querySelector('.search');
 
+function updateUserInterface(arr, input) {
+  const queryResults = document.querySelector('.suggestions');
+  queryResults.innerHTML = arr.map(item => {
+    const highlightCityInput = item.city.toLowerCase().replace(input, `<span class="hl">${input}</span>`);
+    const highlightStateInput = item.state.toLowerCase().replace(input, `<span class="hl">${input}</span>`);
+    return `<li> 
+      <span class="name">${highlightCityInput}, ${highlightStateInput}</span>
+      <span class="population">${item.population}</span>
+    </li>`
+  }).join('');
+}
 
 function handleUserInputChange() {
   let input = userInput.value;
-  console.log(matchInputToCities(input, cities));
+  updateUserInterface(matchInputToCities(input, cities), input);
 }
 
 userInput.addEventListener('keyup', handleUserInputChange);
