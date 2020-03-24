@@ -12,6 +12,7 @@ let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
+console.log('You can draw to your screen using your mouse ❤️');
 
 function draw(e) {
   if (!isDrawing) {
