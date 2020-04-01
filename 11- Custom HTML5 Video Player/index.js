@@ -9,12 +9,44 @@ const ranges = player.querySelectorAll('.player__slider');
 function togglePlay() {
   if (video.paused) {
     video.play();
+  } else {
+    video.pause();
+  }
+}
+
+function updateButton() {
+  if (!video.paused) {
     toggle.innerHTML = "<b>| |</b>"
 
   } else {
-    video.pause();
     toggle.innerHTML = "►"
   }
 }
 
+function skipVideo() {
+  // console.log(this.dataset.skip);
+  video.currentTime += parseFloat(this.dataset.skip);
+}
+
+function handleRangeChange() {
+  video[this.name] = this.value;
+  console.log(this.name, this.value);
+}
+
 toggle.addEventListener("click", togglePlay);
+video.addEventListener("play", updateButton);
+video.addEventListener("pause", updateButton);
+window.addEventListener("keypress", e => {
+  if (e.key === "Spacebar" || " ") {
+    togglePlay();
+  }
+});
+
+skipButtons.forEach(button => {
+  button.addEventListener("click", skipVideo);
+})
+
+ranges.forEach(range => {
+  range.addEventListener("change", handleRangeChange);
+  range.addEventListener("mousemove", handleRangeChange);
+})
