@@ -30,12 +30,24 @@ function skipVideo() {
 
 function handleRangeChange() {
   video[this.name] = this.value;
-  console.log(this.name, this.value);
+  // console.log(this.name, this.value);
+}
+
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressBar.style.flexBasis = `${percent}%`
+}
+
+function handleProgressBarClick(e) {
+  const chosenTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = chosenTime;
 }
 
 toggle.addEventListener("click", togglePlay);
+video.addEventListener("click", togglePlay)
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
+video.addEventListener("timeupdate", handleProgress);
 window.addEventListener("keypress", e => {
   if (e.key === "Spacebar" || " ") {
     togglePlay();
@@ -50,3 +62,9 @@ ranges.forEach(range => {
   range.addEventListener("change", handleRangeChange);
   range.addEventListener("mousemove", handleRangeChange);
 })
+
+let mousedown = false;
+progress.addEventListener("click", handleProgressBarClick);
+progress.addEventListener("mousemove", e => mousedown && handleProgressBarClick(e));
+progress.addEventListener("mousedown", () => mousedown = true);
+progress.addEventListener("mouseup", () => mousedown = false);
