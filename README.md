@@ -28,3 +28,7 @@ https://unsplash.com/photos/5P91SF0zNsI
 https://unsplash.com/photos/z8ct_Q3oCqM
 https://unsplash.com/photos/lpjb_UMOyx8
 https://unsplash.com/photos/S2uQdHTXbbc
+
+Assets of Custom Audio Player can be found here:
+Image: https://unsplash.com/photos/UgNjyPkphtU
+Music: www.bensound.com

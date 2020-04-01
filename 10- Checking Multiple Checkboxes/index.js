@@ -4,14 +4,10 @@ const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'
 let shiftDown = false;
 let lastCheckbox = null;
 
-console.log(checkboxes);
-
 checkboxes.forEach(currentCheckbox => currentCheckbox.addEventListener('click', event => {
   if (shiftDown) {
     if (lastCheckbox) {
-
       let checkboxesToTick = [];
-
       const indexOfLastCheckbox = checkboxes.indexOf(lastCheckbox);
       const indexOfCurrentCheckbox = checkboxes.indexOf(currentCheckbox);
 
@@ -26,7 +22,6 @@ checkboxes.forEach(currentCheckbox => currentCheckbox.addEventListener('click', 
       });
     }
   }
-
   lastCheckbox = currentCheckbox;
 }));
 
