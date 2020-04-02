@@ -29,9 +29,7 @@ body {
   overflow: hidden;
 }
 
-/* This css is only applied when fullscreen is active. */
 .player:fullscreen {
-  max-width: none;
   width: 100%;
 }
 
@@ -109,4 +107,8 @@ input[type=range] {
 
 input[type=range]:focus {
   outline: none;
+}
+
+i.player__button {
+  color: white
 }
