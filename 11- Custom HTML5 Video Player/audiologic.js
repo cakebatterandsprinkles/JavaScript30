@@ -51,6 +51,30 @@ function pauseSong() {
   audio.pause();
 }
 
+function calcProgressPercentage(currTime, duration) {
+  if (currTime && duration !== 0) {
+    return currTime / duration * 100;
+  } else {
+    return 0;
+  }
+}
+
+function updateProgress(e) {
+  const {
+    duration,
+    currentTime
+  } = e.srcElement;
+  const progressPercent = calcProgressPercentage(currentTime, duration);
+  progress_bar.style.width = `${progressPercent}%`
+}
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+  audio.currentTime = (clickX / width) * duration;
+}
+
 prevBtn.addEventListener("click", loadPrev);
 nextBtn.addEventListener("click", loadNext);
 playBtn.addEventListener("click", () => {
@@ -60,4 +84,7 @@ playBtn.addEventListener("click", () => {
   } else {
     playSong();
   }
-})
+});
+audio.addEventListener("timeupdate", updateProgress);
+progressContainer.addEventListener("click", setProgress);
+audio.addEventListener("ended", loadNext);
