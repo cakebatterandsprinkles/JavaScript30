@@ -112,3 +112,13 @@ input[type=range]:focus {
 i.player__button {
   color: white
 }
+
+@media (max-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+}
