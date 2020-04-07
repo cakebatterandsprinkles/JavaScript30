@@ -1,0 +1,22 @@
+html {
+  color: rgb(31, 31, 31);
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.text-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: monospace;
+}
+
+h1 {
+  text-shadow: 10px 10px 0 rgb(34, 34, 34);
+  font-size: 80px;
+}
