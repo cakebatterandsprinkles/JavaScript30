@@ -12,7 +12,21 @@ function getVideo() {
     console.log(localMediaStream);
     video.srcObject = localMediaStream;
     video.play();
+  }).catch(err => {
+    console.log(`Ummm, there's an error:`, err);
+    alert('You have to give permission to access webcam to use this photobooth.');
   });
+}
+
+function paintToCanvas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+  }, 1000);
 }
 
 getVideo();
